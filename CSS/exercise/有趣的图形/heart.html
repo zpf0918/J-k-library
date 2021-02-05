@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .heart {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right:0 ;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      transform: rotate(-45deg);
+    }
+
+    .heart::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: pink;
+    }
+
+    .heart::after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      right: -50px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+
+  <span>rotate可以改变元素的旋转角度，改变之后，伪元素的绝对定位的位置也跟着旋转了。</span>
+</body>
+</html>

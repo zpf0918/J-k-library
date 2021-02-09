@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="start()">开始</button>
+
+  <button onclick="handleClick()">点击</button>
+
+  <button onclick="handleOthSleep()">开始另一个sleep</button>
+
+  <script>
+    function start() {
+      console.log('开始 sleep 和 setTimeout')
+      sleep(3000)
+      setTimeout(() => {
+        console.log('timeout')
+      }, 2000)
+    }
+
+    function sleep(time) {
+      const start = new Date().getTime()
+      while (new Date().getTime() - start < time) {
+        // console.log('success')
+      }
+      console.log('after' + (Date.now() - start)/1000 + 's')
+    }
+
+    function handleOthSleep() {
+      sleep(3000)
+    }
+
+    function handleClick() {
+      console.log('click')
+    }
+  </script>
+</body>
+</html>

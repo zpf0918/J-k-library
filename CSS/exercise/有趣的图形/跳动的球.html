@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ball {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 1px solid #888;
+      background: linear-gradient(
+        35deg,
+        #8800cc,
+        #ff00ff
+      );
+      animation-name: bounce;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        top: 0px;
+      }
+
+      50% {
+        top: 200px;
+        width: 130px;
+        height: 70px;
+      }
+
+      100% {
+        top: 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

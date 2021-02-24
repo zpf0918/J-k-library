@@ -5,17 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    .back {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      animation-name: backdiv;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
     .heart {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      right:0 ;
+      right: 0;
       margin: auto;
       width: 100px;
       height: 100px;
       background-color: pink;
       transform: rotate(-45deg);
+      animation-name: beat;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      z-index: 1;
     }
 
     .heart::before {
@@ -39,11 +55,23 @@
       border-radius: 50%;
       background-color: pink;
     }
+
+    @keyframes backdiv {
+      50% {
+        background: #ffe6f2;;
+      }
+    }
+
+    @keyframes beat {
+      50% {
+        transform: scale(0.5) rotate(-45deg);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="heart"></div>
-
+  <div class="back"></div>
   <span>rotate可以改变元素的旋转角度，改变之后，伪元素的绝对定位的位置也跟着旋转了。</span>
 </body>
 </html>
